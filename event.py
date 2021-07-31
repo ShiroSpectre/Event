@@ -8,6 +8,7 @@ import logging
 from dotenv import load_dotenv
 from functions import background
 from discord.ext import commands
+from functions import leaderboard_func
 
 #DEBUG
 import tracemalloc
@@ -16,9 +17,6 @@ tracemalloc.start()
 # Initialize
 db.initialize()
 db.last_message_time = int(time.time()) - 86400
-
-# Import functions
-from functions import leaderboard_func
 
 # Logging
 logger = logging.getLogger('discord')

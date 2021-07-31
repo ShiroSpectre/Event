@@ -2,11 +2,13 @@ import db
 import json
 import discord
 
-guild_ID = db.guild_ID
-role_ID = db.leaderboard_role
-bot = db.bot
+
 
 def init_leaderboard():
+    bot = db.bot
+    guild_ID = db.guild_ID
+    role_ID = db.leaderboard_role
+
     guild = bot.get_guild(id=guild_ID)
     for role in guild.roles:
         if role.id == role_ID:
